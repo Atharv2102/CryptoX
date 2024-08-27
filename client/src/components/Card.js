@@ -75,11 +75,11 @@ const Card = ({ item, checker }) => {
       </h2>
       <div className="flex flex-col gap-1">
         <h2 className="text-[14px]">
-          Market Capacity: &#36;
+          Market Capacity: {checker === "top10" ? "" : "$"}
           {checker === "top10" ? item.data.market_cap : item.market_cap}
         </h2>
         <h2 className="text-[14px]">
-          Total volume: &#36;
+          Total volume: {checker === "top10" ? "": "$"}
           {checker === "top10" ? item.data.total_volume : item.total_volume}
         </h2>
       </div>

@@ -4,6 +4,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setuser } from "../store/userSlice";
+import { Link } from "react-router-dom";
 const Login = () => {
   const [formData, setformData] = useState({
     email: "",
@@ -93,6 +94,10 @@ const Login = () => {
                     </svg>
                     <span className="ml-3">Log in</span>
                   </button>
+                  <div className="text-center py-5">Dont have an account? 
+                    <Link to={"/signin"} className="text-blue-500 hover:text-blue-700">SignUp
+                    </Link>
+                    </div>
                 </form>
               </div>
             </div>
